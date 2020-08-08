@@ -22,7 +22,7 @@ def outer():
     y = 120
 
     def inner():
-        nonlocal y
+        nonlocal y  # local scope is not defined
         y = 999
 
     inner()

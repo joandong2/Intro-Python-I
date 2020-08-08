@@ -11,19 +11,23 @@ y = [8, 9, 10]
 x.append(4)
 print(x)
 
+# change x lists not add y only
+
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
-print(x + y)
+for i in y:
+    x.append(i)
+print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
 # YOUR CODE HERE
-y.remove(8)
-print(x + y)
+x.remove(8)
+print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
 # YOUR CODE HERE
-y.insert(-1, 99)
-print(x + y)
+x.insert(-1, 99)
+print(x)
 
 # Print the length of list x
 # YOUR CODE HERE
@@ -31,6 +35,12 @@ print(len(x))
 
 # Print all the values in x multiplied by 1000
 # YOUR CODE HERE
+
+# arr
 for i in range(len(x)):
     x[i] = x[i] * 1000
 print(x)
+
+# print each value in line
+# for i in x:
+#print(i * 1000)
