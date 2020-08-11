@@ -2,6 +2,12 @@
 # Good reading: https://www.programiz.com/python-programming/global-local-nonlocal-variables
 
 # When you use a variable in a function, it's local in scope to the function.
+
+# Local - function
+# Non Local - nested function
+# Global - module
+# Builtin - default builtin python methods
+
 x = 12
 
 
@@ -22,7 +28,7 @@ def outer():
     y = 120
 
     def inner():
-        nonlocal y  # local scope is not defined
+        nonlocal y  # local scope is not defined, refer to enclosing y
         y = 999
 
     inner()

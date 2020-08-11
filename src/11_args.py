@@ -5,6 +5,9 @@
 # the sum. This is what you'd consider to be a regular, normal function.
 
 # YOUR CODE HERE
+print("---- F1")
+
+
 def f1(num1, num2):
     return num1 + num2
 
@@ -16,12 +19,16 @@ print(f1(1, 2))
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
+print("---- F2")
 
 
-def f2(*nums):
+def f2(*args):
+    #print("f2 args", args)
+    # return sum(args)
+    # print(type(a)) // check what type of element
     sum = 0
-    for num in nums:
-        sum += num
+    for arg in args:
+        sum += arg
     return sum
 
 
@@ -42,6 +49,8 @@ print(f2(*a))    # Should print 22
 # Note: Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
+
+print("---- F3")
 
 
 def f3(*args):
@@ -67,6 +76,9 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
+print("---- F4")
+
+
 def f4(**keys):
     for key, value in keys.items():
         print("key: {}, value: {}".format(key, value))
@@ -89,4 +101,5 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
+# ** for keyword arguements
 f4(**d)

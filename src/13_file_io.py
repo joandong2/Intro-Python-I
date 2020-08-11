@@ -10,7 +10,7 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-f = open("c:/Users/user/Desktop/LAMBDA/Computer Science/Intro-Python-I/src/foo.txt", "r")
+f = open("foo.txt", "r")
 print(f.read())
 f.close()
 
@@ -20,7 +20,7 @@ f.close()
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-f = open("c:/Users/user/Desktop/LAMBDA/Computer Science/Intro-Python-I/src/bar.txt", "w")
+f = open("bar.txt", "w")
 f.write("Do you bite your thumb at us, sir?\nI do bite my thumb, sir.\nDo you bite your thumb at us, sir?")
 f.close()
 
