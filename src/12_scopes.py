@@ -12,7 +12,7 @@ x = 12
 
 
 def change_x():
-    global x
+    global x  # allows you to modify the variable outside of the current function
     x = 99
 
 
@@ -28,7 +28,7 @@ def outer():
     y = 120
 
     def inner():
-        nonlocal y  # local scope is not defined, refer to enclosing y
+        nonlocal y  # local scope is not defined, assign an outer variable but not global, neither local/global to the functions
         y = 999
 
     inner()

@@ -18,12 +18,12 @@ and does the following:
    the format that your program expects arguments to be given.
    Then exit the program.
 
-Note: the user should provide argument input (in the initial call to run the file) and not 
+Note: the user should provide argument input (in the initial call to run the file) and not
 prompted input. Also, the brackets around year are to denote that the argument is
 optional, as this is a common convention in documentation.
 
-This would mean that from the command line you would call `python3 14_cal.py 4 2015` to 
-print out a calendar for April in 2015, but if you omit either the year or both values, 
+This would mean that from the command line you would call `python3 14_cal.py 4 2015` to
+print out a calendar for April in 2015, but if you omit either the year or both values,
 it should use today’s date to get the month and year.
 """
 
@@ -31,21 +31,37 @@ import sys
 import calendar
 from datetime import datetime
 
-#args = sys.argv
-args = [int(n) for n in sys.argv[1:]]
-# print(args)
-if len(args) == 0:
-    # No inputs specified
-    month = datetime.now().month
-    year = datetime.now().year
-elif len(args) == 1:
-    month = args[0]
-    year = datetime.now().year
-elif len(args) == 2:
-    month = args[0]
-    year = args[1]
-else:
-    print("Usage statement")
-    # exit the program
+# args = sys.argv
+# args = [int(n) for n in sys.argv[1:]]
+# # print(args)
+# if len(args) == 0:
+#     # No inputs specified
+#     month = datetime.now().month
+#     year = datetime.now().year
+# elif len(args) == 1:
+#     month = args[0]
+#     year = datetime.now().year
+# elif len(args) == 2:
+#     month = args[0]
+#     year = args[1]
+# else:
+#     print("Usage statement")
+#     # exit the program
 
-print(month, year)
+# print(month, year)
+
+args = [int(n) for n in sys.argv[1:]]
+calendar = calendar.TextCalendar()
+year = datetime.today().year
+month = datetime.today().month
+
+print(' ')
+
+if len(args) == 0:
+    print(calendar.formatmonth(year, month))
+elif len(args) == 1:
+    print(calendar.formatmonth(year, args[0]))
+elif len(args) == 2:
+    print(calendar.formatmonth(int(args[1]), int(args[0])))
+else:
+    print("invalid arguements")
